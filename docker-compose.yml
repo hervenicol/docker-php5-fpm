@@ -1,0 +1,6 @@
+php-fpm:
+  image: hervenicol/php5-fpm
+  ports:
+    - "9000:9000"
+  volumes:
+    - ../www:/www
