@@ -8,7 +8,7 @@ RUN apt-get update  \
 
 RUN sed -e 's/listen = .*/listen = 9000/' \
         -e '/catch_workers_output/s/^;//' \
-        -e 's/.*chroot = .*/chroot = \/www/' \
+        -e 's/.*chroot = .*/chroot = \/var\/www\/html/' \
         -i /etc/php5/fpm/pool.d/www.conf
 
 EXPOSE 9000

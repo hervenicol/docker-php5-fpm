@@ -3,4 +3,4 @@ php-fpm:
   ports:
     - "9000:9000"
   volumes:
-    - ../www:/www
+    - ../www:/var/www/html
