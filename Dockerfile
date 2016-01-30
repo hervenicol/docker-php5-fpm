@@ -9,11 +9,9 @@ RUN apt-get update  \
 # Updates to config file:
 ## Set listen port to 9000
 ## Redirect output to stdout
-## Set root dir to /var/www/html
 ## Keep env vars
 RUN sed -e 's/listen = .*/listen = 9000/' \
         -e '/catch_workers_output/s/^;//' \
-        -e 's/.*chroot = .*/chroot = \/var\/www\/html/' \
         -e 's/www-data/root/g' \
         -e '/clear_env/s/^;//' \
         -i /etc/php5/fpm/pool.d/www.conf
